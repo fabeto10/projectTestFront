@@ -6,9 +6,28 @@
 
 <ion-content>
   <h1>Platos</h1>
-  <!-- <div *ngFor="let i of platosVar">
-    <div>
+  <div *ngFor="let i of platosVar">
+    <ion-card>
+      <ion-item>
+        <ion-icon name="pin" slot="start"></ion-icon>
+        <ion-label>{{ i.Nombre }}</ion-label>
+      </ion-item>
 
-    </div>
-  </div> -->
+      <ion-card-content>
+        <p>
+          precio: {{ i.Precio }}
+        </p>
+        <p>
+          fecha:
+          {{ i.fecha }}
+        </p>
+        <p>
+          {{ i.oferta }}
+        </p>
+      </ion-card-content>
+    </ion-card>
+</div>
+<ion-button>agregar
+
+</ion-button>
 </ion-content>

@@ -12,6 +12,7 @@ export class AppComponent {
   async onGet(){
     await (await this.platos.get()).subscribe((data) => {
       console.log(data);
+      this.platosVar = data;
     })
   }
 
