@@ -11,11 +11,8 @@ export class AppComponent {
   constructor(private platos: PlatosService) {}
   platosVar: any;
   async onGet(){
-    await this.platos.get().then(data => {
+    await (await this.platos.get()).subscribe((data) => {
       console.log(data);
-      this.platosVar = data;
-    }).catch(err => {
-      console.log(err);
     })
   }
 
